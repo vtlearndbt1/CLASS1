@@ -1,0 +1,7 @@
+
+{{
+    config(
+        materialized='view'
+    )
+}}select  orderid,sum(amount) as total_amount from RAW.STRIPE.PAYMENT group by orderid
+--;
